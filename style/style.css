@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+/* header section */
+/* nav header */
+
+.nav-header{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    width: 100%;
+    background-color: rgba(80, 50, 59, 0.212);
+    position: relative;
+    z-index: 100;
+}
+
+.logo>img{
+    height: 4rem;
+    width: 4rem;
+    margin: 0rem 1rem;
+}
+
+.menu{
+    font-size: 2rem;
+    justify-self: end;
+}
+
+.menu>a{
+    display:inline-flex;
+    margin: 1.5rem 2rem;
+    color:rgb(31, 72, 105);
+    text-shadow: 0rem 0rem 0.2rem rgb(255, 255, 255);
+}
+
+/* menu hamburguer */
+
+.hamburguer
+
+/* social media */
+
+.social-media{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin-top: 60vh;
+    z-index: 100;
+    opacity: 0.6;
+}
+
+.social-media:hover{
+    opacity: 1;
+}
+
+/* home */
+
+.main-bg>img{
+    height: 100vh;
+    width: 100%;
+    animation: zoom 15s;
+}
+
+@keyframes zoom{
+    0%{
+        transform : scale(1.4);
+        opacity: 0.1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.header-section{
+    position: relative;
+    height: 100vh;
+ }
+
+.main-bg{
+    overflow: hidden;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+}
+
+.header-section>p{
+    position: absolute;
+    font-size: 4rem;
+    width: 30vw;
+    margin: 8rem;   
+    text-shadow: 0.5rem 0.5rem 1rem rgb(126, 121, 121);
+    color: rgb(28, 64, 94);
+    font-family: 'Dancing';
+    font-weight: 500;
+}
+
+@font-face{
+    font-family: 'Dancing';
+    src: url('../fonts/DancingScript-VariableFont_wght.ttf');
+}
+
+/* main section */
+/* About me */
+
+.about-me-photo{
+    border-radius: 50%;
+    height: 380px;
+    width: 380px;
+    margin: 20px 0 0 150px;
+    position: relative;
+    box-shadow: 0px 0px 30px;
+    animation: giro 4s;
+}
+
+.about-me-photo>img{
+    height: 100%;
+    border-radius: 50%;
+}
+
+@keyframes giro{
+    0%{left: -35rem}
+    100%{left:0rem}
+}
+
+.about-me>p{
+    width: 90%;
+    height: max-content;
+    font-size: 1.6em;
+    margin: auto;
+    color:rgb(28, 64, 94);
+    text-align: start;
+}
+
+.about-me{
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    box-sizing: margin-box;
+    height: 100vh;
+    align-content: center;
+    background-image: linear-gradient(to left,#E6DADA,#274046);
+}
+
+/* about reiki */
+
+.about-reiki{
+    height: 100vh;
+    padding: 5rem 0 0 3rem;
+    background-size: cover;
+    position: relative;
+}
+
+.text{
+    height: 100vh;
+    font-size: 2rem;
+}
+
+.text>p{
+    visibility: hidden;
+    z-index: 100;
+    color: rgba(255, 255, 255, 0.623);
+}
+
+.parag{
+    position: absolute;
+    top: 27rem;
+    left: 46rem;
+    width: 35rem;
+    text-align: center;
+}
+
+#pq1{
+    top: 18rem;
+    text-shadow: 0rem 0rem 0.5rem rgb(184, 83, 25);  
+}
+
+#pq5{
+    text-shadow: 0rem 0rem 0.5rem rgba(202, 27, 164, 0.582);
+}
+
+#pq3{
+    text-shadow: 0rem 0rem 0.5rem rgb(5, 107, 78);
+}
+
+#pq2{
+    text-shadow: 0rem 0rem 0.5rem rgba(107, 5, 5, 0.733);
+}
+
+.about-reiki a{
+    font-size: 1.5rem;
+    font-weight: 900;
+    
+    background: rgba(88, 88, 88, 0.267);
+    border-radius: 10px;
+    padding: 0.5rem;
+    color: rgba(240, 234, 234, 0.623);
+}
+
+li{
+    margin: 2rem;
+}
+
+ul{
+    padding-top: 7rem;
+}
+
+/* contact */
+
+.contact-section{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100vh;
+   
+}
+
+.bg-contact{
+    height: 100vh;
+    box-sizing: border-box;
+    background-size: 100%;
+}
+
+/* depoimentos */
+
+.testimony{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    text-align: center;
+    height: 55vh;
+    color: rgb(6, 7, 70);
+    justify-items: center;
+}
+
+.testimony-text{
+    width: 20vw;
+    font-size: 1.2em;
+    height: max-content;
+    margin-top: 10rem;
+}
+
+.testimony-text>p{
+    box-shadow: gray 0rem 0rem 1.5rem;
+    border-radius: 1.3rem;
+    background-color:rgba(255, 255, 255, 0.308);
+    padding: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+
+
+/* main>contact */
+
+.contact{
+    background-color: tomato;
+}
+
+/* footer section */
+
+.footer-section{
+    background-image: url(../images/footer-paisagem.png);
+    
+    
+    height: 304px;
+    background-size: 100%;
+}
+
+
+ 
