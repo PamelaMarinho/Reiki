@@ -20,3 +20,13 @@ function changeVisib(){
     itens[i].style.visibility='hidden'
    }
 }
+
+
+window.onscroll= detectaAltura()
+
+function detectaAltura(){
+if(window.scrollTop>100){
+    
+    console.log('chegou')
+}
+}

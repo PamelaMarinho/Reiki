@@ -4,16 +4,15 @@
     text-decoration: none;
     list-style: none;
 }
-/* header section */
-/* nav header */
+/* *********  header section *********   */
+/* *********  nav header *********   */
 
 .nav-header{
-    display: grid;
-    grid-template-columns: 10% 90%;
     width: 100%;
     background-color: rgba(80, 50, 59, 0.212);
-    position: relative;
-    z-index: 100;
+    position: absolute;
+    top: 0;
+    z-index: 1;
 }
 
 .logo>img{
@@ -24,28 +23,110 @@
 
 .menu{
     font-size: 2rem;
-    justify-self: end;
+    right: 0;
+    position: absolute;
+    z-index: 3;
+    transition: 1s;
 }
 
 .menu>a{
     display:inline-flex;
-    margin: 1.5rem 2rem;
+    margin: 1.2rem 2rem;
     color:rgb(31, 72, 105);
     text-shadow: 0rem 0rem 0.2rem rgb(255, 255, 255);
 }
 
-/* menu hamburguer */
+/*  *********  menu hamburguer *********   */
 
-.hamburguer
+@
 
-/* social media */
+input{
+    display: none;
+}
+
+.hamburguer{
+    height: 0.2rem;
+    width: 2rem;
+    background-color: #000;
+    margin-top: 1.8rem;
+    right: 0.9rem;
+    transition: 2s;
+    position: absolute;
+}
+
+.hamburguer:after,
+.hamburguer:before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: 1s;
+    background-color: #000;
+    display: block;
+}
+
+.hamburguer:after{
+    margin-top: 0.5rem;
+}
+
+.hamburguer:before{
+    margin-top: -0.5rem;
+}
+
+input:checked ~ label .hamburguer:after {
+    transform: rotate(90deg);
+    bottom: 0;
+}
+
+input:checked ~ label .hamburguer:before {
+    transform: rotate(90deg);
+    bottom: 0;
+}
+
+input:checked ~ label .hamburguer {
+    transform: rotate(45deg);
+}
+
+.menu-hamburguer{
+    height: 3.75rem;
+    width: 3.75rem;
+    border-radius: 3.125rem;
+    z-index: 4;
+    background-color: rgba(207, 207, 207, 0);
+    position: fixed;
+    right: 0.5rem;
+    top: 0.5rem;
+    transition: 1s;
+}
+
+input:checked ~ label .menu-hamburguer{
+    background-color: rgba(238, 238, 241, 0.904);
+    box-shadow: 0.5rem 0.5rem 1rem;
+    height: 400px;
+    width: 300px;
+    border-radius: 0px 0px 0px 300px;
+    top: 0;
+    right: 0;
+}
+
+input:checked ~ label .menu{
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    margin: 0.2rem 3rem 0 0;
+    font-size: 1.6rem;
+    line-height: 1.2rem;
+    position: fixed;
+}
+
+/* *********  social media *********   */
 
 .social-media{
     display: flex;
     flex-direction: column;
     position: fixed;
     margin-top: 60vh;
-    z-index: 100;
+    z-index: 3;
     opacity: 0.6;
 }
 
@@ -53,7 +134,7 @@
     opacity: 1;
 }
 
-/* home */
+/*  *********  home *********   */
 
 .main-bg>img{
     height: 100vh;
@@ -100,8 +181,8 @@
     src: url('../fonts/DancingScript-VariableFont_wght.ttf');
 }
 
-/* main section */
-/* About me */
+/*   *********  main section *********   */
+/*   *********  About me  *********   */
 
 .about-me-photo{
     border-radius: 50%;
@@ -141,7 +222,7 @@
     background-image: linear-gradient(to left,#E6DADA,#274046);
 }
 
-/* about reiki */
+/*  *********  about reiki  *********  */
 
 .about-reiki{
     height: 100vh;
@@ -157,8 +238,8 @@
 
 .text>p{
     visibility: hidden;
-    z-index: 100;
-    color: rgba(255, 255, 255, 0.623);
+    z-index: 3;
+    color: rgba(255, 255, 255, 0.726);
 }
 
 .parag{
@@ -184,16 +265,16 @@
 
 #pq2{
     text-shadow: 0rem 0rem 0.5rem rgba(107, 5, 5, 0.733);
+    top:18rem;
 }
 
 .about-reiki a{
     font-size: 1.5rem;
     font-weight: 900;
-    
-    background: rgba(88, 88, 88, 0.267);
+    background: rgba(88, 88, 88, 0.534);
     border-radius: 10px;
     padding: 0.5rem;
-    color: rgba(240, 234, 234, 0.623);
+    color: rgb(224, 223, 223);
 }
 
 li{
@@ -204,7 +285,7 @@ ul{
     padding-top: 7rem;
 }
 
-/* contact */
+/* *********  contact *********   */
 
 .contact-section{
     display: grid;
@@ -219,7 +300,7 @@ ul{
     background-size: 100%;
 }
 
-/* depoimentos */
+/*  *********  depoimentos *********   */
 
 .testimony{
     display: grid;
@@ -247,13 +328,13 @@ ul{
 
 
 
-/* main>contact */
+/* *********  main>contact *********   */
 
 .contact{
     background-color: tomato;
 }
 
-/* footer section */
+/* *********  footer section *********   */
 
 .footer-section{
     background-image: url(../images/footer-paisagem.png);
