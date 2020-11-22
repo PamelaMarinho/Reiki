@@ -21,12 +21,34 @@ function changeVisib(){
    }
 }
 
+const item = document.body
+item.onscroll = function(){area()}
+item.onload = function(){area()}
 
-window.onscroll= detectaAltura()
+function area(){
+    const top = pageYOffset || document.body.scrollTop
+    if(top<90){
+        document.getElementById('hamburguer').style.display='none'
+        document.getElementById('menu-icon').style.display='none'
+        const itens = document.getElementsByClassName('a-menu')
+        for(i=0;i<=5;i++){
+            itens[0].style.display='none'
+        }
+        } else{
+            document.getElementById('hamburguer').style.display='inline-block'
+            document.getElementById('menu-icon').style.display='inline-block'
+            
+        }
+    }
 
-function detectaAltura(){
-if(window.scrollTop>100){
+/*     const itensMenu = document.getElementsByClassName('a-menu')
     
-    console.log('chegou')
-}
-}
+    for(i=0;i<=5;i++){
+        const item = itensMenu[0]
+        
+        item.onclick = function(){
+            console.log('aqui')
+            area()
+        }
+
+    } */

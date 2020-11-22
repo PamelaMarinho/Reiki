@@ -9,49 +9,53 @@
 
 .nav-header{
     width: 100%;
-    background-color: rgba(80, 50, 59, 0.212);
     position: absolute;
-    top: 0;
-    z-index: 1;
 }
 
 .logo>img{
     height: 4rem;
     width: 4rem;
-    margin: 0rem 1rem;
+    margin: 0.4rem 0 0 0rem;
+    position: fixed;
+    z-index: 4;
 }
 
 .menu{
-    font-size: 2rem;
-    right: 0;
     position: absolute;
+    font-size: 2rem;
+    width: 100%;
     z-index: 3;
     transition: 1s;
+    background-color: rgba(77, 63, 63, 0.219);
 }
 
 .menu>a{
+    float: right;
     display:inline-flex;
     margin: 1.2rem 2rem;
     color:rgb(31, 72, 105);
     text-shadow: 0rem 0rem 0.2rem rgb(255, 255, 255);
+
 }
 
 /*  *********  menu hamburguer *********   */
 
-@
+
 
 input{
     display: none;
 }
 
 .hamburguer{
+    background-color: rgb(0, 0, 0);
+    transition: 2s;
     height: 0.2rem;
     width: 2rem;
-    background-color: #000;
-    margin-top: 1.8rem;
-    right: 0.9rem;
-    transition: 2s;
-    position: absolute;
+    cursor: pointer;
+    top: 2rem;
+    right: 1rem;
+    position: fixed;
+    z-index: 10;
 }
 
 .hamburguer:after,
@@ -87,36 +91,55 @@ input:checked ~ label .hamburguer {
     transform: rotate(45deg);
 }
 
-.menu-hamburguer{
-    height: 3.75rem;
-    width: 3.75rem;
-    border-radius: 3.125rem;
-    z-index: 4;
-    background-color: rgba(207, 207, 207, 0);
+.menu-icon{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50px;
     position: fixed;
     right: 0.5rem;
-    top: 0.5rem;
+    top: 0.6rem;
+    transition: 1s;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.801);
+}
+
+input:checked ~ label .menu-icon{
+    background-color: rgb(228, 228, 228);
+    height: 300px;
+    width: 300px;
+    border-radius: 0 0 0 300px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 8;
+}
+
+.menu-hamb>a{
+    display: none;
+}
+
+.menu-hamb{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 300px;
+    width: 300px;
+    z-index: 9;
+    margin-top: -10rem;
+    margin-right: -10rem;
     transition: 1s;
 }
 
-input:checked ~ label .menu-hamburguer{
-    background-color: rgba(238, 238, 241, 0.904);
-    box-shadow: 0.5rem 0.5rem 1rem;
-    height: 400px;
-    width: 300px;
-    border-radius: 0px 0px 0px 300px;
-    top: 0;
-    right: 0;
+input:checked ~ label .menu-hamb{
+    margin-top: 0.3rem;
+    margin-right: 1rem;
 }
 
-input:checked ~ label .menu{
-    z-index: 4;
-    display: flex;
-    flex-direction: column;
-    margin: 0.2rem 3rem 0 0;
+input:checked ~ label .menu-hamb>a{
     font-size: 1.6rem;
-    line-height: 1.2rem;
-    position: fixed;
+    display: block;
+    margin: 1.4rem 0rem 0 8rem;
+    color: rgb(0, 0, 0);
 }
 
 /* *********  social media *********   */
@@ -208,8 +231,7 @@ input:checked ~ label .menu{
     width: 90%;
     height: max-content;
     font-size: 1.6em;
-    margin: auto;
-    color:rgb(28, 64, 94);
+    color:rgb(210, 216, 221);
     text-align: start;
 }
 
@@ -219,7 +241,8 @@ input:checked ~ label .menu{
     box-sizing: margin-box;
     height: 100vh;
     align-content: center;
-    background-image: linear-gradient(to left,#E6DADA,#274046);
+    
+    background-color: #545454;
 }
 
 /*  *********  about reiki  *********  */
@@ -326,7 +349,9 @@ ul{
     margin-bottom: 1rem;
 }
 
-
+.about-reiki{
+    background-color: rgba(229,217,217);
+}
 
 /* *********  main>contact *********   */
 
@@ -338,9 +363,7 @@ ul{
 
 .footer-section{
     background-image: url(../images/footer-paisagem.png);
-    
-    
-    height: 304px;
+    height: 19rem;
     background-size: 100%;
 }
 
